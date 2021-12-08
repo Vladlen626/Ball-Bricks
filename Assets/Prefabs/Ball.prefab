@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d980478c65721ff4f9e87c8846798f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 1
+  ballSpeed: 3
   timeToBallSpeedUp: 3
   timer: 0
 --- !u!58 &6783618413505797967

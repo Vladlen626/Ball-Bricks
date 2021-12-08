@@ -8,7 +8,6 @@ public class _GameMainScript : MonoBehaviour
     [Header("Set in Inspector")]
     public GameObject       ballPrefab;
     public Vector2          ballStartPos;
-    public float            bricksSpawnPerSecond;
     public static float     tryTime;
     public static int       tryCounts;
 
@@ -17,7 +16,7 @@ public class _GameMainScript : MonoBehaviour
     {
         tryTime = 0;
         SpawnBall();
-        Invoke("SpawnBrick", 1f / bricksSpawnPerSecond);
+        Invoke("SpawnBrick", 1f /SelectDifficult.difficult.bricksSpawnPerSecond);
     }
 
     private void Update() {
@@ -42,7 +41,7 @@ public class _GameMainScript : MonoBehaviour
             brick.SetActive(true);
         }
 
-        Invoke("SpawnBrick", 1f / bricksSpawnPerSecond);
+        Invoke("SpawnBrick", 1f / SelectDifficult.difficult.bricksSpawnPerSecond);
     }
 
     void SpawnBall() {

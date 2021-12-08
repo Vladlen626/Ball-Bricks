@@ -8,7 +8,7 @@ public class Bricks : MonoBehaviour
   
     void FixedUpdate()
     {
-        this.transform.Translate(Vector2.left * bricksSpeed * Time.deltaTime);
+        this.transform.Translate(Vector2.left * SelectDifficult.difficult.ballSpeed * Time.deltaTime);
         if(this.transform.position.x < -9.5f) {
             this.gameObject.SetActive(false);
         }

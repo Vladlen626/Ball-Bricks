@@ -10,7 +10,7 @@ public class Parallax : MonoBehaviour
     public float        gameSpeed;
 
     void FixedUpdate() {
-        this.transform.Translate(Vector2.left * gameSpeed * Time.deltaTime);
+        this.transform.Translate(Vector2.left * SelectDifficult.difficult.ballSpeed * Time.deltaTime);
         if (this.transform.position.x < endX) {
             Vector2 pos = new Vector2 (startX, this.transform.position.y);
             this.transform.position = pos;
